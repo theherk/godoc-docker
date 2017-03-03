@@ -1,6 +1,8 @@
 godoc-docker
 ============
 
+https://hub.docker.com/r/theherk/godoc/
+
 With this container, you can:
 
     export GO_PKGS=export GO_PKGS="github.com/spf13/viper github.com/mitchellh/go-homedir"
