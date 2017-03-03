@@ -36,9 +36,9 @@ clean-images: clean-containers ## remove images
 	for c in $(IMAGES); do docker rmi $$c; done
 
 publish: build ## publish the docker build to registry
-	docker login -u theherk https://hub.docker.com
-	docker tag $(IMAGE):latest hub.docker.com/$(IMAGE):latest
-	docker push hub.docker.com/$(IMAGE):latest
+	docker login -u theherk
+	docker tag $(IMAGE):latest theherk/$(IMAGE):latest
+	docker push theherk/$(IMAGE):latest
 
 run: clean-containers build ## remove previous and run a new container
 	docker run -d -e "GO_PKGS=$(GO_PKGS)" \
